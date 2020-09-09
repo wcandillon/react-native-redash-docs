@@ -1,16 +1,21 @@
+---
+description: >-
+  Animations in Reanimated v2 have powerful composability built-in. The
+  following are functions TypeScript types that will help you to build custom
+  animations.
+---
+
 # Animations
 
-Animations in Reanimated v2 have powerful composability built-in. The following are functions TypeScript types that will help you to build custom animations.
-
-# Higher-order Animations
+## Higher-order Animations
 
 Higher-order animations are a powerful concept in Reanimated v2. Here is an example.
 
-## `defineAnimation()`
+### `defineAnimation()`
 
-This utility function enables you to declare custom animations that can be invoked on both the JS and UI thread.  
+This utility function enables you to declare custom animations that can be invoked on both the JS and UI thread.
 
-```ts
+```typescript
 const withCustomAnimation = () => {
   "worklet";
   return defineAnimation(() => {
@@ -24,11 +29,11 @@ const withCustomAnimation = () => {
 }
 ```
 
-## `animationParameter(animation)`
+### `animationParameter(animation)`
 
 Access animations passed as parameters safely on both the UI and JS thread with the proper static types. Animations can receive other animations as parameter.
 
-```ts
+```typescript
 export const withPause = (
   animationParam: AnimationParameter,
   paused: Animated.SharedValue<boolean>
@@ -42,12 +47,11 @@ export const withPause = (
     // ...animation code
 ```
 
+### `withPause()`
 
-## `withPause()`
+Make an animation pausable. The state of the animation \(paused or not\) is controlled by a boolean shared value.
 
-Make an animation pausable. The state of the animation (paused or not) is controlled by a boolean shared value.
-
-```ts
+```typescript
 const progress = useSharedValue(0);
 const paused = useSharedValue(false);
 useEffect(() => {
@@ -55,12 +59,12 @@ useEffect(() => {
 }, []);
 ```
 
-## `withBouncing()`
+### `withBouncing()`
 
 Add a bouncing behavior to a physics-based animation. An animation is defined as being physics-based if it contains a velocity in its state.
 
-```ts
+```typescript
 // will bounce if the animations hits the position 0 or 100
 withBouncing(withDecay({ velocity }), 0, 100)
 ```
- 
+

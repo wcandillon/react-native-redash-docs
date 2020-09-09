@@ -4,7 +4,7 @@
 
 Type representing a vector. it is defined as
 
-```ts
+```typescript
 export interface Vector<T = number> {
   x: T;
   y: T;
@@ -14,3 +14,4 @@ export interface Vector<T = number> {
 ## `useVector()`
 
 Returns a vector of shared values.
+

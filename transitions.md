@@ -1,13 +1,15 @@
+---
+description: Transitions can attach an animation value to a change of React state.
+---
+
 # Transitions
 
-Transitions can attach an animation value to a change of React state.
+| State \(JS Thread\) | Value \(UI Thread\) |  |
+| :--- | :---: | ---: |
+| Timing | useTimingTransition\(\) | withTimingTransition\(\) |
+| Spring | useSpringTransition\(\) | withSpringTransition\(\) |
 
-|        | State (JS Thread)      | Value (UI Thread)        |
-| ------ |:----------------------:| ------------------------:|
-| Timing | useTimingTransition()  | withTimingTransition()   |
-| Spring | useSpringTransition()  | withSpringTransition()   |
-
-```ts
+```typescript
 import {useTimingTransition} from "react-native-redash";
 
 const Toggle = () => {
@@ -18,12 +20,13 @@ const Toggle = () => {
 
 ## `useTiming()`
 
-```ts
+```typescript
 const useTiming: (state: number | boolean, config?: Animated.WithTimingConfig) => number;
 ```
 
 ## `useSpring()`
 
-```ts
+```typescript
 const useSpring: (state: number | boolean, config?: Animated.WithSpringConfig) => number;
 ```
+

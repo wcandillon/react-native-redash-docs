@@ -1,21 +1,23 @@
-# Colors
+---
+description: Color interpolations and more
+---
 
-Color interpolations and more
+# Colors
 
 ## `Color`
 
 TypeScript type to define an animation value as color.
 
-```ts
+```typescript
 // Color can be of string or number depending of the context in which it was executed
 const color: Animated.SharedValue<Color> = useDerivedValue(() => mixColor(progress.value, "blue", "red"));
 ```
 
 ## `interpolateColor()`
 
-Interpolate an animation value into a color. The color can be interpolated in the RGB or HSV color space (default is RGB).
+Interpolate an animation value into a color. The color can be interpolated in the RGB or HSV color space \(default is RGB\).
 
-```ts
+```typescript
   const theta = useSharedValue(Math.PI);
   const backgroundColor = useDerivedValue(() => {
     return interpolateColor(
@@ -31,7 +33,7 @@ Interpolate an animation value into a color. The color can be interpolated in th
 
 Identical to `interpolateColor()` but with an animation value that goes from 0 to 1.
 
-```ts
+```typescript
 const backgroundColor = useDerivedValue(() =>  
   mixColor(progress.value, "#ff3884", "#38ffb3")
 );
@@ -44,3 +46,4 @@ Convert an HSV into an RGB color.
 ## `colorForBackground()`
 
 Returns black or white depending on the value of the background color.
+
