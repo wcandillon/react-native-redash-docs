@@ -24,7 +24,3 @@ To add TypeScript support for the v1 functions, add the following type to your `
   "include": ["node_modules/react-native-redash/lib/typescript/v1/index.d.ts"]
 ```
 
-## Documentation
-
-[https://wcandillon.gitbook.io/redash/](https://wcandillon.gitbook.io/redash/)
-
