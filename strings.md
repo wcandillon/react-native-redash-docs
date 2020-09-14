@@ -7,10 +7,10 @@ This component is like `<Text>` but accepts a string animation node as property.
 ```typescript
 () => {
   const price = useSharedValue(42);
-  const formattedPrice = useDerivedValue(() => (`${price.value}`.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
+  const formattedPrice = useDerivedValue(() => (`${price.value}`.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' })));
   return (
     <ReText
-      text={price}
+      text={formattedPrice}
       style={{ color: "black", fontVariant: ["tabular-nums"] }}
     />
   )
