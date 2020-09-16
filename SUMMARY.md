@@ -8,4 +8,5 @@
 * [Strings](strings.md)
 * [Transitions](transitions.md)
 * [Vectors](vectors.md)
+* [Paths](paths.md)
 
