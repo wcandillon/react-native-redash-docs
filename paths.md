@@ -1,10 +1,12 @@
 ---
-description: Functions to build, interpolate, and SVG paths made of Bèzier curves
+description: 'Functions to build, interpolate, and SVG paths made of Bèzier curves'
 ---
+
+# Paths
 
 ## Examples
 
-```tsx
+```typescript
 import {move, curve, serialize} from "react-native-redash";
 
 const Example = () => {
@@ -36,6 +38,7 @@ const Example = () => {
 ```
 
 ## `move(x, y)`
+
 Returns a Bèzier curve command.
 
 ## `cuve({c1: {x, y}, c2: {x, y}, to: {x, y}})`
@@ -49,3 +52,4 @@ Returns a close command.
 ## `serialize(path)`
 
 Serialize a path into an SVG path string.
+
