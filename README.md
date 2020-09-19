@@ -8,10 +8,6 @@ The React Native Reanimated and Gesture Handler Toolbelt. As seen on the [“Can
 yarn add react-native-redash
 ```
 
-## Documentation
-
-[https://wcandillon.gitbook.io/redash/](https://wcandillon.gitbook.io/redash/)
-
 ## ⚠️ v1 Users ⚠️
 
 v1 documentation: https://wcandillon.github.io/react-native-redash-v1-docs/
