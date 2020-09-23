@@ -62,3 +62,16 @@ const cubicBezier = (t: number, p0: number, p1: number, p2: number, p3: number) 
 
 Returns the coordinate of a cubic bezier curve. t is the length of the curve from 0 to 1. `cubicBezier(0, p0, p1, p2, p3)` equals `p0` and `cubicBezier(1, p0, p1, p2, p3)` equals `p3`. `p0` and `p3` are respectively the starting and ending point of the curve. `p1` and `p2` are the control points.
 
+## `cubicBezierYForX()`
+
+Given a cubic Bèzier curve, return the `y` value for `x`.
+
+```typescript
+const x = 116;
+const from = vec.create(59, 218);
+const c1 = vec.create(131, 39);
+const c2 = vec.create(204, 223);
+const to = vec.create(227, 89);
+// y= 139
+const y = cubicBezierYForX(x, from, c1, c2, to)));
+```
