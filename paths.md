@@ -51,8 +51,7 @@ Returns a close command.
 
 ## `parse(path)`
 
-**⚠️ this function cannot run on the UI thread. It must be executed on the JS thread**
-Parse an SVG path into a sequence of Bèzier curves. The SVG is normalized to have absolute values and to be approximated to a sequence of Bèzier curves.
+**⚠️ this function cannot run on the UI thread. It must be executed on the JS thread** Parse an SVG path into a sequence of Bèzier curves. The SVG is normalized to have absolute values and to be approximated to a sequence of Bèzier curves.
 
 ## `serialize(path)`
 
@@ -62,7 +61,7 @@ Serialize a path into an SVG path string.
 
 Interpolate between paths.
 
-```tsx
+```jsx
 const progress = useSharedValue(0);
 // ⚠️ parse() cannot be executed on the UI thread
 const p1 =
@@ -83,7 +82,7 @@ return <Path animatedProps={animatedProps} />;
 
 Interpolate two paths with an animation value that goes from 0 to 1.
 
-```tsx
+```jsx
 const progress = useSharedValue(0);
 // ⚠️ parse() cannot be executed on the UI thread
 const p1 =
@@ -99,3 +98,4 @@ const animatedProps = useAnimatedProps(() => {
 });
 return <Path animatedProps={animatedProps} />;
 ```
+
