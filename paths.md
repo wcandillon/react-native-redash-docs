@@ -101,3 +101,16 @@ const animatedProps = useAnimatedProps(() => {
 return <Path animatedProps={animatedProps} />;
 ```
 
+## `getYForX`
+
+Return the `y` value of a path given its `x` coordinate
+
+```jsx
+const p1 = parse(
+  "M150,0 C150,0 0,75 200,75 C75,200 200,225 200,225 C225,200 200,150 0,150"
+);
+// 75
+getYForX(p1, 200))
+// ~151
+getYForX(p1, 50)
+```
