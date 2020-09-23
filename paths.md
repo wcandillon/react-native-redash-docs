@@ -51,7 +51,9 @@ Returns a close command.
 
 ## `parse(path)`
 
-**⚠️ this function cannot run on the UI thread. It must be executed on the JS thread** Parse an SVG path into a sequence of Bèzier curves. The SVG is normalized to have absolute values and to be approximated to a sequence of Bèzier curves.
+**⚠️ this function cannot run on the UI thread. It must be executed on the JS thread**
+
+ Parse an SVG path into a sequence of Bèzier curves. The SVG is normalized to have absolute values and to be approximated to a sequence of Bèzier curves.
 
 ## `serialize(path)`
 
