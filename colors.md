@@ -9,8 +9,7 @@ description: Color interpolations and more
 TypeScript type to define an animation value as color.
 
 ```typescript
-// Color can be of string or number depending of the context in which it was executed
-const color: Animated.SharedValue<Color> = useDerivedValue(() => mixColor(progress.value, "blue", "red"));
+const color = useDerivedValue(() => mixColor(progress.value, "blue", "red"));
 ```
 
 ## `interpolateColor()`

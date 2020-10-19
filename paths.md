@@ -10,24 +10,22 @@ description: 'Functions to build, interpolate, and SVG paths made of Bèzier cur
 import {move, curve, serialize} from "react-native-redash";
 
 const Example = () => {
-  const path = [
-    move(0, 0),
-    curve({
-      c1: {
-        x: 1,
-        y: 0
-      },
-      c2: {
-        x: 1,
-        y: 1
-      },
-      to:  {
-        x: 1,
-        y: 0.5
-      }
-    }),
-    close()
-  ];
+  const path = createPath({ x: 0, y: 0});
+  addCurve(path, {
+    c1: {
+      x: 1,
+      y: 0
+    },
+    c2: {
+      x: 1,
+      y: 1
+    },
+    to:  {
+      x: 1,
+      y: 0.5
+    }
+  });
+  close(path);
   const d = serialize(path);
   return (
     <Svg viewBox="0 0 1 1">
@@ -37,23 +35,23 @@ const Example = () => {
 }
 ```
 
-## `move(x, y)`
+## `createPath(path, {x, y})`
 
-Returns a Bèzier curve command.
+Create a new path
 
-## `curve({c1: {x, y}, c2: {x, y}, to: {x, y}})`
+## `addCurse(path, {c1: {x, y}, c2: {x, y}, to: {x, y}})`
 
-Returns a Bèzier curve command.
+Add a Bèzier curve command to a path.
 
-## `close()`
+## `close(path)`
 
-Returns a close command.
+Add a close command to a path.
 
 ## `parse(path)`
 
 **⚠️ this function cannot run on the UI thread. It must be executed on the JS thread**
 
- Parse an SVG path into a sequence of Bèzier curves. The SVG is normalized to have absolute values and to be approximated to a sequence of Bèzier curves.
+Parse an SVG path into a sequence of Bèzier curves. The SVG is normalized to have absolute values and to be approximated to a sequence of Bèzier curves.
 
 ## `serialize(path)`
 
@@ -114,3 +112,4 @@ getYForX(p1, 200))
 // ~151
 getYForX(p1, 50)
 ```
+
