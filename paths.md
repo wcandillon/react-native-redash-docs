@@ -69,8 +69,7 @@ const p1 =
 const p2 = parse(
   "M150,0 C150,0 0,75 200,75 C75,200 200,225 200,225 C225,200 200,150 0,150 ");
 const animatedProps = useAnimatedProps(() => {
-  const aPath = interpolatePath(progress.value, [0, 1], [p1, p2]);
-  const d = serialize(d);
+  const d = interpolatePath(progress.value, [0, 1], [p1, p2]);
   return {
     d
   };
@@ -90,8 +89,7 @@ const p1 =
 const p2 = parse(
   "M150,0 C150,0 0,75 200,75 C75,200 200,225 200,225 C225,200 200,150 0,150 ");
 const animatedProps = useAnimatedProps(() => {
-  const aPath = mixPath(progress.value, p1, p2);
-  const d = serialize(d);
+  const d = mixPath(progress.value, p1, p2);
   return {
     d
   };
