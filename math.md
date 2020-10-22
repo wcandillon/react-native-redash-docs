@@ -1,5 +1,13 @@
 # Math
 
+## `mix()`
+
+```typescript
+const mix = (value: number, x: number, y: number) => number
+```
+
+mix performs a linear interpolation between x and y using a to weight between them. The return value is computed as `x * (1 - value) + y * value`.
+
 ## `bin()`
 
 ```typescript
