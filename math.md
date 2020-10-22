@@ -46,6 +46,14 @@ clamp(1, 0, 100); // 1
 clamp(101, 0, 100); // 100
 ```
 
+## `avg()`
+
+```typescript
+const avg = (values: number[]) => number;
+```
+
+Returns the average value of an array
+
 ## `between()`
 
 ```typescript
