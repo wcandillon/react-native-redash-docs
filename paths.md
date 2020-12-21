@@ -39,7 +39,7 @@ const Example = () => {
 
 Create a new path
 
-## `addCurse(path, {c1: {x, y}, c2: {x, y}, to: {x, y}})`
+## `addCurve(path, {c1: {x, y}, c2: {x, y}, to: {x, y}})`
 
 Add a Bèzier curve command to a path.
 
