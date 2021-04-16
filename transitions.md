@@ -10,11 +10,11 @@ description: Transitions can attach an animation value to a change of React stat
 | Spring | useSpringTransition\(\) | withSpringTransition\(\) |
 
 ```typescript
-import {useTimingTransition} from "react-native-redash";
+import { useTiming } from "react-native-redash";
 
 const Toggle = () => {
   const [open, setOpen] = useState(false);
-  const transition = useTimingTransition(open, { duration: 400 });
+  const transition = useTiming(open, { duration: 400 });
 }
 ```
 
